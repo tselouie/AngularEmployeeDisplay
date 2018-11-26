@@ -12,6 +12,9 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { PositionService } from './data/position.service';
 import { EmployeeService } from './data/employee.service';
 import { HttpClientModule} from "@angular/common/http";
+import { EmployeeComponent } from './employee.component';
+import { PositionComponent } from './position.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { HttpClientModule} from "@angular/common/http";
     ContentComponent,
     NavComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EmployeeComponent,
+    PositionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [PositionService, EmployeeService],
   bootstrap: [AppComponent],

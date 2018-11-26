@@ -1,6 +1,6 @@
 <div class="center">
   <h2>Positions</h2>
-  <p class="lead">A table to display different positions information.</p>
+  <p class="lead">A table to display different positions' information.</p>
 </div>
 
 <div class="container">
@@ -15,7 +15,7 @@
 
           </thead>
           <tbody>
-            <tr *ngFor='let pos of positions'>
+            <tr (click)="routePosition(pos._id)" *ngFor='let pos of positions'>
               <td>{{pos.PositionName}}</td>
               <td>{{pos.PositionDescription}}</td>
               <td>${{pos.PositionBaseSalary | number: '.2'}}</td>
